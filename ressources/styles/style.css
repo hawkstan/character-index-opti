@@ -22,6 +22,16 @@
   max-width: 90%;
   margin: auto;
   font-family: "Roboto", sans-serif;
+  color: #ffffff;
+}
+
+* button {
+  border: none;
+  color: inherit;
+}
+
+* a {
+  color: inherit;
 }
 
 * body header {
@@ -45,7 +55,6 @@
 
 * body header h1 {
   margin-right: auto;
-  color: white;
   font-family: "Permanent Marker", cursive;
 }
 
@@ -120,7 +129,6 @@
 }
 
 * body main .grid .card h2 {
-  color: white;
   font-size: 19px;
   font-weight: 400;
   margin: 25px 0 20px 0;
@@ -129,7 +137,6 @@
 
 * body main .grid .card p {
   display: block;
-  color: white;
   height: 32%;
   font-size: 13px;
   width: 100%;
@@ -138,7 +145,6 @@
 
 * body main .grid .card a {
   text-decoration: none;
-  color: white;
   border: 1px solid white;
   padding: 5px 10px;
   width: 100px;
@@ -315,6 +321,20 @@
   width: auto;
   height: 100%;
   z-index: 0;
+}
+
+* footer {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+* footer #addCharacter {
+  text-decoration: none;
+  background-color: #4B7CFB;
+  border-radius: 10px;
+  padding: 10px 35px;
+  text-align: center;
+  margin: auto;
 }
 
 @media screen and (max-width: 480px) {
