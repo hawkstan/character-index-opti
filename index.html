@@ -1,28 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="ressources/styles/styles.css"/>
-    <title>Main page</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Character Manager</title>
+    <link rel="stylesheet" type="text/css" href="ressources/styles/style.css"/>
+  </head>
+
+  <body class="">
     <header>
-        <h1>Character manager</h1>
-        <hr>
+      <h1>Character Manager</h1>
+      <!-- <input id="searchbar" type="search"/> -->
     </header>
-    <section id="target">
-        <template class="tpl-char">
-            <li class="character-small">
-                <img class="image">
-                <strong class="name"></strong>
-                <p class="shortDescription"></p>
-                <a href=""></a>
-            </li>
+
+    <main class="">
+      <div class="grid">
+        <template id="tpl-character">
+          <div class="card">
+            <img src="" class="profile-pic-small" id="image" alt="picture of the hero"/>
+            <h2 id="name">Card title</h2>
+            <p id="shortDescription">
+              This is a wider card with supporting text below as a
+              natural lead-in to additional content. This content is a
+              little bit longer.
+            </p>
+            <a href="singleChar.html">See character</a>
+          </div>
         </template>
-        <a href="" class="add">Add a new character to the collection</a>
-    </section>
-    <script src="ressources/JS/script.js"></script>
-</body>
+      </div>
+      
+      <!-- to delete
+      <div id="overlayView" class="overlayView">
+        <div class="col mb-4 popup" id="popup">
+          <div class="card mb-3 position">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img
+                  src="assets/img/judeus-samson-rAomxXulMNM-unsplash.jpg"
+                  class="card-img viewCardImg"
+                  alt="..."
+                />
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <label class="labelViewCard">Name</label>
+                  <h2>Card title</h2>
+                  <label class="labelViewCard">Short description</label>
+                  <p class="shortDescription">
+                    This is a wider card with supporting text below as a natural
+                    lead-in to additional content. This content is a little bit
+                    longer.
+                  </p>
+                  <label class="labelViewCard">Description</label>
+                  <p class="description">
+                    Une tres tres tres tres tres tres tres tres tres tres tres
+                    tres tres tres tres tres tres tres tres tres tres tres tres
+                    tres tres tres tres tres tres tres tres tres tres tres tres
+                    tres tres tres tres tres tres tres tres tres tres tres
+                    longue description
+                  </p>
+                </div>
+                <button
+                  type="submit"
+                  class="btn close toggleScroll"
+                  id="closeView"
+                >
+                  <i class="far fa-window-close fa-2x"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="overlayEdit" id="overlayEdit">
+        <div class="container">
+          <div class="title">
+            <h1>Editez votre personnage</h1>
+            <p>Modifiez les champs nécessaires</p>
+          </div>
+
+          <form>
+            <div class="form-group row">
+              <label for="editName" class="col-sm-2 col-form-label">Name</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="editName" />
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label for="editShortDescription" class="col-sm-2 col-form-label"
+                >Short description</label
+              >
+              <div class="col-sm-10">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="editShortDescription"
+                  placeholder="Describe your hero in one line"
+                />
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label for="editImgSelector" class="col-sm-2 col-form-label"
+                >Select image:</label
+              >
+              <div class="col-sm-10">
+                <input
+                  type="file"
+                  class=".form-control-file"
+                  id="editImgSelector"
+                  name="img"
+                  accept="image/png, image/jpeg"
+                />
+                <img
+                  id="editImgPreview"
+                  style="max-width: 100px; max-height: 50px"
+                  src=""
+                />
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label for="editDescription" class="col-sm-2 col-form-label"
+                >Description</label
+              >
+              <div class="col-sm-10">
+                <textarea
+                  class="form-control"
+                  id="editDescription"
+                  placeholder="Write here a full description of Hero."
+                  rows="10"
+                ></textarea>
+              </div>
+            </div>
+          </form>
+          <div class="form-group row">
+            <div class="col-sm-10 align">
+              <button
+                type="submit"
+                id="editSubmitButton"
+                class="btn btn-primary btn-lg"
+              >
+                Submit
+              </button>
+            </div>
+          </div>
+          <button
+            type="submit"
+            class="btn editclose toggleScroll"
+            id="closeEdit"
+          >
+            <i class="far fa-window-close fa-2x"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="overlayCreation" id="overlayCreation">
+        <div class="container">
+          <div class="title">
+            <h1>Créez un nouveau personnage</h1>
+            <p>
+              Remplissez tous les champs avec les informations sur le personnage
+            </p>
+          </div>
+
+          <form>
+            <div class="form-group row">
+              <label for="createName" class="col-sm-2 col-form-label"
+                >Name</label
+              >
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="createName" />
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label
+                for="createShortDescription"
+                class="col-sm-2 col-form-label"
+                >Short description</label
+              >
+              <div class="col-sm-10">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="createShortDescription"
+                  placeholder="Describe your hero in one line"
+                />
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label for="createImgSelector" class="col-sm-2 col-form-label"
+                >Select image:</label
+              >
+              <div class="col-sm-10">
+                <input
+                  type="file"
+                  class=".form-control-file"
+                  id="createImgSelector"
+                  name="img"
+                  accept="image/png, image/jpeg"
+                />
+                <img
+                  id="createImgPreview"
+                  style="max-width: 100px; max-height: 50px"
+                  src=""
+                />
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label for="createDescription" class="col-sm-2 col-form-label"
+                >Description</label
+              >
+              <div class="col-sm-10">
+                <textarea
+                  class="form-control"
+                  id="createDescription"
+                  placeholder="Write here a full description of Hero."
+                  rows="10"
+                ></textarea>
+              </div>
+            </div>
+          </form>
+          <div class="form-group row">
+            <div class="col-sm-10 align">
+              <button
+                type="submit"
+                id="createSubmitButton"
+                class="btn btn-primary btn-lg"
+              >
+                Submit
+              </button>
+            </div>
+          </div>
+          <button
+            type="submit"
+            class="btn creationclose toggleScroll"
+            id="closeCreate"
+          >
+            <i class="far fa-window-close fa-2x"></i>
+          </button>
+        </div>
+      </div>
+      -->
+
+    </main>
+    <footer>
+      <a href="addChar.html">Add a new character to the collection</a>
+    </footer>
+    <script type="text/javascript" src="ressources/JS/script.js"></script>
+    <script type="text/javascript" src="ressources/JS/dashboard.js"></script>
+  </body>
 </html>
