@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="ressources/styles/style.css"/>
+    <title>Character detail</title>
+</head>
+<body>
+  <header>
+    <h1>Character Manager</h1>
+    <!-- <input id="searchbar" type="search"/> -->
+  </header>
+  <div class="singleChar">
+    <template id="tpl-character">
+      <div class="card">
+        <img src="" class="profile-pic-big" id="image" alt="picture of the hero"/>
+        <h2 id="name">Card title</h2>
+        <small id="shortDescription">
+          This is a wider card with supporting text below as a
+          natural lead-in to additional content. This content is a
+          little bit longer.
+        </small>
+        <p id="description">
+          Une très très très très très très très très très très très
+          très très très très très très très très très très très très
+          très très très très très très très très très très très très
+          très très très très très très très très très très très
+          longue description
+        </p>
+        <div class="buttons">
+          <a href="editCharacter.html">Update character</a>
+          <button id="deleteCharacter">Delete character</button>
+        </div>
+      </div>
+    </template>
+  </div>
+  <script type="text/javascript" src="ressources/JS/script.js"></script>
+  <script type="text/javascript" src="ressources/JS/delete.js"></script>
+</body>
+</html>
